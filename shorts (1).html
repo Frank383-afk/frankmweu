@@ -9,10 +9,12 @@
         }
 
         body {
-           background-image: url('https://i.pinimg.com/736x/2c/d4/74/2cd474e45062484708c0fa9c2ba42609.jpg')
-         background-size: cover; 
-             background-position: center; 
-         background-attachment: fixed; 
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://i.pinimg.com/736x/2c/d4/74/2cd474e45062484708c0fa9c2ba42609.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
         }
 
         h1, h2 {
@@ -36,6 +38,10 @@
             padding: 15px 0;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
         }
 
         .topnav a {
@@ -58,8 +64,22 @@
             color: white;
         }
 
+        .search-bar {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            width: 250px;
+        }
+
+        .search-bar::placeholder {
+            color: #fff;
+        }
+
         .container {
-            padding: 100px 20px 40px; /* Ensuring the content isn't hidden under the navbar */
+            padding: 120px 20px 40px; /* Adjusting for the navbar height */
         }
 
         .video-section {
@@ -79,17 +99,32 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 100%;
             max-width: 600px;
+            position: relative;
         }
 
         .video-card iframe {
-            width: 50%;
+            width: 100%;
             height: 350px;
             border-radius: 15px;
+            display: block;
         }
 
         .video-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .video-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .featured-section {
@@ -106,6 +141,11 @@
             .topnav a {
                 font-size: 1rem;
                 padding: 10px;
+            }
+
+            .search-bar {
+                width: 200px;
+                font-size: 0.9rem;
             }
 
             .video-section {
@@ -151,6 +191,7 @@
         <a href="index.html" class="active">Home</a>
         <a href="shorts (1).html">Shorts</a>
         <a href="franko.html">Football</a>
+        <input type="text" class="search-bar" placeholder="Search videos...">
     </div>
 
     <div class="container">
@@ -159,18 +200,22 @@
         </div>
 
         <div class="video-section">
-            <!-- Each video is inside a card now -->
+            <!-- Each video is inside a card now with title -->
             <div class="video-card">
                 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                <div class="video-title">Rick Astley - Never Gonna Give You Up</div>
             </div>
             <div class="video-card">
                 <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" allowfullscreen></iframe>
+                <div class="video-title">Luis Fonsi - Despacito</div>
             </div>
             <div class="video-card">
                 <iframe src="https://www.youtube.com/embed/TkS6q4ChvGg" allowfullscreen></iframe>
+                <div class="video-title">Ed Sheeran - Shape of You</div>
             </div>
             <div class="video-card">
                 <iframe src="https://www.youtube.com/embed/e9XRhNcBsjk" allowfullscreen></iframe>
+                <div class="video-title">The Weeknd - Blinding Lights</div>
             </div>
             <!-- Add more videos here in the same format -->
         </div>
