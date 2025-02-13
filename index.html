@@ -20,72 +20,7 @@
         }
        
         /* Navigation Bar */
-        .sidebar {
-    width: 80px;
-    height: 100vh;
-    background-color: #fff;
-    border-right: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    transition: width 0.3s ease-in-out;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-/* Sidebar menu item */
-.menu-item {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #333;
-    text-decoration: none;
-}
-
-.menu-item i {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.menu-item:hover {
-    background-color: #f0f0f0;
-    color: #007BFF;
-}
-
-/* Expandable Sidebar */
-.sidebar:hover {
-    width: 200px;
-    align-items: flex-start;
-    padding-left: 10px;
-}
-
-.sidebar:hover .menu-item {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px 15px;
-}
-
-.sidebar:hover .menu-item i {
-    margin-right: 15px;
-}
-
-.sidebar:hover .menu-item span {
-    display: inline;
-}
-
-/* Active Link */
-.menu-item.active {
-    background-color: #007BFF;
-    color: white;
-}
+       
 
         /* Heading */
         h2 {
@@ -138,13 +73,9 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="topnav">
         <a href="index.html" class="active">Home</a>
         <a href="franko.html">Football</a>
-        <a href="#">Music</a>
-        <a href="#">Videos</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
     </div>
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Search videos..." onkeyup="searchVideos()">
