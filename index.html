@@ -16,22 +16,63 @@
         }
 
         body {
-            background-image: url('https://i.pinimg.com/736x/e8/a1/97/e8a19764a3891fdeec56d55cb74d196d.jpg'); 
+            background-image: url('https://i.pinimg.com/736x/56/69/d5/5669d56d94667ab996b3f379acbff214.jpg')
         }
-       
-        /* Navigation Bar */
-       
 
-        /* Heading */
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin: 30px 0;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        /* Navigation Bar */
+        .topnav {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .topnav a {
+            color: #66ff66;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        .topnav a:hover, .topnav a.active {
+            background-color: #66ff66;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+        }
+
+        .search-container input {
+            width: 220px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .search-container input:focus {
+            width: 280px;
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: gray;
+            font-size: 18px;
         }
 
         /* Video Section */
-        .content {
+        .video-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
@@ -57,18 +98,18 @@
             height: 200px;
             border: none;
         }
- .video-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: white; /* White text color */
-    padding: 10px 12px;
-    font-size: 16px; /* Increased font size for better visibility */
-    text-align: center;
-    font-weight: 600; /* Bold text for emphasis */
-}
+
+        .video-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 12px;
+            font-size: 14px;
+            text-align: center;
+        }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
