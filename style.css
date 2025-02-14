@@ -37,7 +37,7 @@
 
         /* Search Bar */
         .search-bar {
-    float: right;
+    float: left;
 }
 
         .search-container input {
