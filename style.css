@@ -36,9 +36,9 @@
         }
 
         /* Search Bar */
-        .search-container {
-            position: relative;
-        }
+        .search-bar {
+    float: right;
+}
 
         .search-container input {
             width: 220px;
