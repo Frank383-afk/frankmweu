@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(SELATIMBERYARD.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            background-color: #A94E1D;
+            animation: change 2s ease-in-out forwards;
+        }
+
+        @keyframes change {
+            from { opacity: 1; background-color: #A94E1D; }
+            to { opacity: 0; background-color: #D9D9D9; z-index: -1; }
+        }
+
+        .card{
+            height: 400px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(20px);
+            box-shadow: 0px 0px 100px rgb(124,124,124);
+            animation: show 2s ease-in 0.2s forwards;
+            transition: 0.5s;
+        }
+
+        @keyframes show {
+            from { opacity: 0; transform: translateY(-20%); }
+            to { opacity: 1; transform: translateY(0%); }
+        }
+
+        h1{
+            color: #3A2C23;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        h1 span{
+            color: #A94E1D;
+        }
+
+        .card input{
+            height: 40px;
+            width: 300px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            color: #A94E1D;
+            text-align: center;
+        }
+
+        ::placeholder{
+            text-align: center;
+            color: #A94E1D;
+        }
+
+        .input-box{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        button{
+            height: 40px;
+            width: 150px;
+            border-radius: 10px;
+            border: 1px solid white;
+            outline: none;
+            background: transparent;
+            color: black;
+            cursor: pointer;
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        button::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background-color: black;
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        button:hover::after{
+            left: 0;
+            width: 100%;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+            color: #D9D9D9;
+        }
+
+        @media (max-width: 768px){
+            .card{
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+                padding: 30px 20px;
+                gap: 20px;
+            }
+
+            h1{
+                font-size: 32px;
+            }
+
+            .card input{
+                width: 90%;
+                height: 45px;
+                font-size: 15px;
+            }
+
+            button{
+                width: 90%;
+                height: 45px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Log<span> In</span></h1>
+            <div class="input-box">
+                <input type="text" placeholder="First/Last name" required>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="example@gmail.com" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="**********" required>
+            </div>
+            <button onclick="document.location='order.html'">Order Now</button>
+        </div>
+    </div>
+</body>
+</html>

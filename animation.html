@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: Century Gothic;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .img img{
+        height: 100px;
+        width: 100px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        border: 5px solid rgb(157, 107, 14);
+    }
+    .card{
+        height: 400px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(157, 107, 14);
+        flex-direction: column;
+        position: relative;
+        border: 20px solid rgb(157, 107, 14);
+        perspective: 1000px;
+    }
+    .img{
+        height: 100px;
+        width: 400px;
+        background-color: white;
+        position: absolute;
+        top: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 30px;
+    }
+    h2{
+        text-align: center;
+        font-weight: 900;
+
+    }
+    p{
+        text-align: center;
+        font-weight: 200;
+    }
+    .info{
+        height: 300px;
+        width: 300px;
+        background-color:rgb(88, 62, 15) ;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+            <img src="1.jpg" >
+            </div>
+            <div class="info">
+                <h2>Name</h2>
+                <p>A well established Developer</p>
+
+            </div>
+
+        </div>
+        </div>
+
+</body>
+</html>

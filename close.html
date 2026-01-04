@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #401803;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #401803;
+            animation: fadeout 3s ease-in-out forwards;
+            z-index: -1;
+        }
+
+        @keyframes fadeout {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        .card{
+            height: 500px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 0px 50px rgba(0,0,0,0.5);
+            text-align: center;
+            animation: show 2s ease-in-out forwards;
+        }
+
+        @keyframes show {
+            from { opacity: 0; transform: translateY(-20%); }
+            to { opacity: 1; transform: translateY(0%); }
+        }
+
+        h1{
+            font-size: 40px;
+            color: #A94E1D;
+        }
+
+        h1 span{
+            color: #f8f8f8;
+        }
+
+        button{
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: #A94E1D;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: black;
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        button:hover::after{
+            width: 100%;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+            color: #D9D9D9;
+        }
+
+        @media (max-width: 768px){
+            .card{
+                width: 90%;
+                height: auto;
+                padding: 20px;
+            }
+
+            h1{
+                font-size: 28px;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1><span>THANK YOU</span> FOR SHOPPING WITH US! COME BACK SOON</h1>
+            <button onclick="document.location='new.html'">Close</button>
+        </div>
+    </div>
+</body>
+</html>
